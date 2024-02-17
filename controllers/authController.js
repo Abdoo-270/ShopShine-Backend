@@ -1,6 +1,5 @@
 const User = require("../models/User");
 const Token = require("../models/Token");
-const Profile = require("../models/Profile");
 const { StatusCodes } = require("http-status-codes");
 const CustomError = require("../errors");
 const {
