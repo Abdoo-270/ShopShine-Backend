@@ -104,7 +104,7 @@ const login = async (req, res) => {
   res.status(StatusCodes.OK).json({ user: tokenUser });
 };
 
-//NOTE logout
+//!SECTION logout
 
 const logout = async (req, res) => {
   await Token.findOneAndDelete({ user: req.user.userId });
@@ -114,7 +114,7 @@ const logout = async (req, res) => {
     secure: true,
     signed: true,
     sameSite: "None",
-    domain: ".sharekargo.com",
+    origin: "http://localhost:5173",
     expires: new Date(Date.now()),
   });
   res.cookie("refreshToken", "logout", {
@@ -122,7 +122,7 @@ const logout = async (req, res) => {
     secure: true,
     signed: true,
     sameSite: "None",
-    domain: ".sharekargo.com",
+    origin: "http://localhost:5173",
     expires: new Date(Date.now()),
   });
   res.status(StatusCodes.OK).json({ msg: "user logged out!" });
