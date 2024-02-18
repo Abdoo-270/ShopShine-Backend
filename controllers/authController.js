@@ -5,7 +5,6 @@ const CustomError = require("../errors");
 const {
   attachCookiesToResponse,
   createTokenUser,
-  sendVerificationEmail,
   sendResetPasswordEmail,
   createHash,
 } = require("../utils");

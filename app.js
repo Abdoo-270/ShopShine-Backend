@@ -33,6 +33,14 @@ app.use(
     max: 60,
   })
 );
+
+// Allow requests from 'http://localhost:5173'
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
+
 app.use(helmet());
 
 app.use(xss());
