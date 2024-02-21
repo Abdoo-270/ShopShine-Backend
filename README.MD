@@ -41,7 +41,7 @@ MONGO_URL=your_mongodb_url_here
 JWT_SECRET=your_jwt_secret_here
 ```
 
-Replace `your_mongodb_uri_here` with the connection URI for your MongoDB database. If you're using a local MongoDB instance, the URI might look like `mongodb://localhost:27017/your_database_name`.
+Replace `your_mongodb_uri_here` with the connection URL for your MongoDB database. If you're using a local MongoDB instance, the URL might look like `mongodb://localhost:27017/your_database_name`.
 
 Replace `your_jwt_secret_here` with a secure secret key for JWT token generation.
 
@@ -114,5 +114,5 @@ This will start the backend server, and it will be ready to handle requests from
 
   - Description: Creates a new order in the database.
 
-  - **Show Current User Orders:** `GET /api/orders/showAllMyOrders`
+- **Show Current User Orders:** `GET /api/orders showAllMyOrders`
   - Description: Creates the current user orders.
