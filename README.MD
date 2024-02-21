@@ -114,5 +114,5 @@ This will start the backend server, and it will be ready to handle requests from
 
   - Description: Creates a new order in the database.
 
-- **Show Current User Orders:** `GET /api/orders showAllMyOrders`
+- **Show Current User Orders:** `GET /api/orders/showAllMyOrders`
   - Description: Creates the current user orders.
