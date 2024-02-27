@@ -9,7 +9,7 @@ const createProduct = async (req, res) => {
   res.status(StatusCodes.CREATED).json({ product });
 };
 const getAllProducts = async (req, res) => {
-  const products = await Product.find({});
+  const products = await Product.find({}).sort({ createdAt: -1 });
   res.status(StatusCodes.OK).json({ nth: products.length, products });
 };
 const getSingleProduct = async (req, res) => {
@@ -33,7 +33,7 @@ const updateProduct = async (req, res) => {
       `sorry, we couldn't find product with id ${productId}`
     );
   }
-  res.status(StatusCodes.CREATED).json({ product });
+  res.status(StatusCodes.CREATED).json({ product, msg: "product updated" });
 };
 
 const deleteProduct = async (req, res) => {

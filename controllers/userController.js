@@ -8,9 +8,8 @@ const {
 } = require("../utils");
 
 const getAllUsers = async (req, res) => {
-  console.log(req.user);
-  const users = await User.find({ role: "user" }).select("-password");
-  res.status(StatusCodes.OK).json({ users });
+  const users = await User.find().select("-password");
+  res.status(StatusCodes.OK).json({ nth: users.length, users });
 };
 
 const getSingleUser = async (req, res) => {
