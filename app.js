@@ -35,7 +35,7 @@ app.use(
 );
 
 // Allow requests from 'http://localhost:5173'
-const frontendProductionUrl = "https://shopshine-frontend.onrender.com/";
+const frontendProductionUrl = "https://shopshine-frontend.onrender.com";
 const frontendDevUrl = "http://localhost:5173";
 app.use(
   cors({
