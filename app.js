@@ -33,27 +33,13 @@ app.use(
     max: 60,
   })
 );
-/*
+
 // Allow requests from 'http://localhost:5173'
 const frontendProductionUrl = "https://shopshine-frontend.onrender.com/";
 const frontendDevUrl = "http://localhost:5173";
 app.use(
   cors({
     origin: frontendProductionUrl,
-    credentials: true,
-  })
-);
-*/
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Allow requests from frontendProductionUrl
-      if (origin === frontendProductionUrl) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
     credentials: true,
   })
 );
